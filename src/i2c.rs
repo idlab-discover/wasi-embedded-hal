@@ -1,17 +1,5 @@
 use crate::bindings::sketch::embedded::i2c::{ErrorCode, I2c, NoAcknowledgeSource, Operation};
-use alloc::vec::Vec;
 use embedded_hal::i2c::{NoAcknowledgeSource as HalNoAcknowledgeSource, Operation as HalOperation};
-
-extern crate alloc;
-
-#[cfg(target_arch = "wasm32")]
-use lol_alloc::{AssumeSingleThreaded, FreeListAllocator};
-
-// SAFETY: This application is single threaded, so using AssumeSingleThreaded is allowed.
-#[cfg(target_arch = "wasm32")]
-#[global_allocator]
-static ALLOCATOR: AssumeSingleThreaded<FreeListAllocator> =
-    unsafe { AssumeSingleThreaded::new(FreeListAllocator::new()) };
 
 #[derive(Debug)]
 pub struct I2CError {
