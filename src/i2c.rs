@@ -1,6 +1,9 @@
 use crate::bindings::sketch::embedded::i2c::{NoAcknowledgeSource, Operation};
 use embedded_hal::i2c::{NoAcknowledgeSource as HalNoAcknowledgeSource, Operation as HalOperation};
 
+extern crate alloc;
+use alloc::vec::Vec;
+
 #[doc(inline)]
 pub use crate::bindings::sketch::embedded::i2c::{ErrorCode, I2c};
 
