@@ -11,3 +11,8 @@ bitflags = "2.4.2"
 embedded-hal = "1.0.0"
 lol_alloc = "0.4.1"
 wit-bindgen-rt = "0.22.0"
+
+[features]
+default = ["use_std"]
+use_std = ["use_alloc"]
+use_alloc = []

@@ -1,9 +1,11 @@
 // extern crate alloc;
-// use alloc::vec::Vec;
 
 #[macro_export]
 macro_rules! use_with_bindings {
     ($i2c:ident) => {
+        #[cfg(feature = "use_alloc")]
+        use alloc::vec::Vec;
+
         use embedded_hal::i2c::{
             NoAcknowledgeSource as HalNoAcknowledgeSource, Operation as HalOperation,
         };
