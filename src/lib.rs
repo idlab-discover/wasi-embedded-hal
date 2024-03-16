@@ -1,5 +1,5 @@
 #![no_std]
 
-mod bindings;
+// mod bindings;
 
 pub mod i2c;
