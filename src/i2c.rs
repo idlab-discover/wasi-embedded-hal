@@ -1,7 +1,10 @@
-// extern crate alloc;
+//! Implementation of [`embedded-hal`] I2C traits
+//!
+//! [`embedded-hal`]: https://docs.rs/embedded-hal
 
+/// Macro that adds HAL support for a given I2C bindings.
 #[macro_export]
-macro_rules! use_with_bindings {
+macro_rules! add_i2c_hal {
     ($i2c:ident) => {
         #[cfg(feature = "use_alloc")]
         use alloc::vec::Vec;
