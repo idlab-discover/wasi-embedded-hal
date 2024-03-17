@@ -6,7 +6,7 @@ keywords = ["Wasm", "hal"]
 license = "Apache-2.0"
 name = "wasi-embedded-hal"
 repository = "https://github.com/Zelzahn/wasi-embedded-hal"
-version = "0.0.1"
+version = "0.2.0"
 edition = "2021"
 
 [dependencies]

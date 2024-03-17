@@ -10,4 +10,5 @@
 #[cfg(feature = "use_alloc")]
 extern crate alloc;
 
+pub mod delay;
 pub mod i2c;

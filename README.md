@@ -6,7 +6,7 @@
 
 ## Status
 
-Currently only support for I2C is provided, but more is planned.
+Currently only support for I2C and Delay is provided, but more is planned.
 
 Note that only `embedded-hal` version 1.O is supported.
 
