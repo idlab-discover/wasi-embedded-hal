@@ -2,6 +2,7 @@
 //!
 //! [`embedded-hal`]: https://docs.rs/embedded-hal
 
+#[cfg(feature = "hal_1_0")]
 #[macro_export]
 macro_rules! add_delay_hal {
     ($delay: ident) => {

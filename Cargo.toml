@@ -6,16 +6,19 @@ keywords = ["Wasm", "hal"]
 license = "Apache-2.0"
 name = "wasi-embedded-hal"
 repository = "https://github.com/Zelzahn/wasi-embedded-hal"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 
 [dependencies]
 bitflags = "2.4.2"
-embedded-hal = "1.0.0"
+embedded-hal-1_0 = { version = "1.0.0", optional = true, package = "embedded-hal" }
+embedded-hal-0_2 = { version = "0.2.7", optional = true, package = "embedded-hal" }
 lol_alloc = "0.4.1"
-wit-bindgen-rt = "0.22.0"
+wit-bindgen-rt = "0.24.0"
 
 [features]
-default = ["use_std"]
+default = ["use_std", "hal_1_0"]
 use_std = ["use_alloc"]
 use_alloc = []
+hal_1_0 = ["dep:embedded-hal-1_0"]
+hal_0_2 = ["dep:embedded-hal-0_2"]
